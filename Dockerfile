@@ -14,7 +14,7 @@ WORKDIR /usr/src/node-red
 
 COPY package.json ./
 
-RUN npm install --unsafe-perm --no-update-notifier --only=production
+RUN npm install --cache /data/.npm --unsafe-perm --no-update-notifier --only=production
 
 COPY *.js ./
 COPY defaults defaults/
