@@ -14,14 +14,14 @@ WORKDIR /usr/src/node-red
 
 COPY package.json ./
 
-RUN npm install --cache /data/.npm --unsafe-perm --no-update-notifier --only=production
+RUN npm install --cache /usr/src/node-red/.npm --unsafe-perm --no-update-notifier --only=production
 
 COPY *.js ./
 COPY defaults defaults/
 COPY nodes nodes/
 COPY public public/
 
-RUN chown -R node-red:root /usr/src/node-red
+RUN chown -R node-red:root /usr/src/node-red && chmod -R g+rwX /usr/src/node-red
 
 USER node-red
 # Env variables
@@ -30,6 +30,6 @@ ENV NODE_PATH=/usr/src/node-red/node_modules:/data/node_modules \
 
 EXPOSE 1880
 
-ENTRYPOINT ["npm", "start", "--cache", "/data/.npm", "--", "--userDir", "/data"]
+ENTRYPOINT ["npm", "start", "--cache", "/usr/src/node-red/.npm", "--", "--userDir", "/data"]
 
 CMD ["--settings" ,"./docker-settings.js"]
