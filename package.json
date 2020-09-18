@@ -1,0 +1,33 @@
+{
+    "name": "node-red-rh",
+    "version": "0.0.1",
+    "description": "Low-code programming for event-driven applications (Red Hat image)",
+    "homepage": "http://nodered.org",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hammoaj/node-red-rh.git"
+    },
+    "main": "node_modules/node-red/red/red.js",
+    "scripts": {
+        "start": "node $NODE_OPTIONS node_modules/node-red/red.js $FLOWS"
+    },
+    "contributors": [
+        {
+            "name": "Dave Conway-Jones"
+        },
+        {
+            "name": "Nick O'Leary"
+        },
+        {
+            "name": "Adam Hammond"
+        }
+    ],
+    "dependencies": {
+        "node-red": "1.1.x",
+        "@cloudant/cloudant": "^4.2.2"
+    },
+    "engines": {
+        "node": ">=10"
+    }
+}
