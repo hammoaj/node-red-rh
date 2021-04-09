@@ -3,7 +3,7 @@
 This repository is an example Node-RED application that can be deployed into
 a Red Hat Openshift environment (or other Docker environments) with only a couple clicks.
 
-*Note that this image differs from the standard node-red-docker image as it is based on the Red Hat Universal Base Image ubi8/nodejs-12. The standard docker image is based on Alpine Linux. This image supports the DB2 driver, which doesn't work on the standard image, however this image is significantly larger than the Alpine based image.*
+*Note that this image differs from the standard node-red-docker image as it is based on the Red Hat Universal Base Image ubi8/nodejs-14. The standard docker image is based on Alpine Linux. This image supports the DB2 driver, which doesn't work on the standard image, however this image is significantly larger than the Alpine based image.*
 
 ## Using Cloudant or CouchDB database as your file store
 
