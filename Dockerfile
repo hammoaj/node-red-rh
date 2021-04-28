@@ -2,7 +2,8 @@ FROM registry.access.redhat.com/ubi8/nodejs-14
 
 USER root
 
-RUN dnf -y install make gcc gcc-c++ openssl-devel bzip2-devel python2
+RUN dnf update && \
+    dnf -y install make gcc gcc-c++ openssl-devel bzip2-devel python2
 
 RUN mkdir -p /usr/src/node-red /data && \
     useradd --home-dir /usr/src/node-red --gid 0 --no-create-home --uid 1000 node-red && \
