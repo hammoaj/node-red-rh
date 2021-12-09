@@ -24,7 +24,7 @@
         }
     ],
     "dependencies": {
-        "node-red": "1.3.x",
+        "node-red": "2.1.x",
         "@cloudant/cloudant": "^4.x"
     },
     "engines": {
